@@ -1,0 +1,240 @@
+section {
+  padding: 50px 0;
+}
+
+section.top {
+  background-color: #000;
+}
+
+section.videos {
+  background-color: #f9f9f9;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.header h2 {
+  font-size: 2.4rem;
+}
+
+.header a {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: var(--grey-dark-one);
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+.header a:hover {
+  text-decoration: none;
+  outline: 0;
+  color: currentColor;
+}
+
+.header a:hover::before {
+  transform: translateX(100%);
+}
+
+.header a:hover::after {
+  transform: translateX(100%);
+}
+
+.header a::before, .header a::after {
+  content: "";
+  width: 100%;
+  height: .2rem;
+  background-color: currentColor;
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  transition: all .5s;
+  transform: translateX(-100%);
+}
+
+.header a::after {
+  right: -100%;
+}
+
+.recently__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  grid-template-areas: "main submain";
+}
+
+@media (max-width: 1024px) {
+  .recently__wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "main" "submain";
+  }
+}
+
+.recently .main-post {
+  grid-area: main;
+}
+
+.recently .submain-posts {
+  grid-area: submain;
+}
+
+.recently .submain-posts .post:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.top .header {
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.top__posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 3rem;
+  grid-template-areas: "main main post" "main main secondpost";
+}
+
+@media (max-width: 991px) {
+  .top__posts {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "main" "post" "secondpost";
+  }
+}
+
+.top__posts .toppost:not(:first-child) {
+  grid-area: post;
+}
+
+.top__posts .toppost:last-child {
+  grid-area: secondpost;
+}
+
+.top__posts .toppost:first-child {
+  grid-area: main;
+}
+
+.trending__posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .trending__posts {
+    grid-template-columns: 1fr;
+  }
+}
+
+.videos {
+  color: #fff !important;
+}
+
+.videos .header {
+  color: var(--grey-dark-two) !important;
+}
+
+.videos__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 3rem;
+  grid-template-areas: "main main video1" "main main video2" "main main video3" "main main video4";
+}
+
+@media (max-width: 991px) {
+  .videos__wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "main" "video1" "video2" "video3" "video4";
+  }
+}
+
+.videos__wrapper .video {
+  grid-area: video;
+}
+
+.videos__wrapper .video:nth-child(1) {
+  grid-area: main;
+}
+
+.videos__wrapper .video:nth-child(2) {
+  grid-area: video1;
+}
+
+.videos__wrapper .video:nth-child(3) {
+  grid-area: video2;
+}
+
+.videos__wrapper .video:nth-child(4) {
+  grid-area: video3;
+}
+
+.videos__wrapper .video:nth-child(5) {
+  grid-area: video4;
+}
+
+.popular__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "posts posts sidebar";
+  grid-gap: 4.5rem;
+}
+
+@media (max-width: 1024px) {
+  .popular__wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "posts" "sidebar";
+    grid-gap: 3rem;
+  }
+}
+
+.popular__posts {
+  grid-area: posts;
+}
+
+.popular__posts .ad {
+  margin-bottom: 6rem;
+  width: 100%;
+}
+
+.popular__posts .ad img {
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .popular__posts .ad img img {
+    width: 80%;
+  }
+}
+
+.popular__posts .post {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.most__posts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+}
+
+@media (max-width: 991px) {
+  .most__posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .most__posts {
+    grid-template-columns: 1fr;
+  }
+}

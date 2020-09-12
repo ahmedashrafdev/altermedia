@@ -1,0 +1,1 @@
+@keyframes menu-toggler-anim{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes tabs-anim{0%{opacity:scaleX(0)}50%{opacity:scaleX(1);transform:translateY(10%)}100%{transform:translateY(0)}}

@@ -1,0 +1,23 @@
+.popular__posts .post .post-img {
+  max-width: 28.5rem !important;
+}
+
+.popular__posts .post .category {
+  margin-bottom: 3rem;
+}
+
+.popular__posts .post .post-title {
+  margin-bottom: 1.5rem;
+}
+
+.popular__posts .post .post-title h6 {
+  font-size: 2.4rem;
+}
+
+.popular__posts .post .post-meta {
+  margin-bottom: 1.5rem;
+}
+
+.popular__posts .post .post-description p {
+  display: block;
+}

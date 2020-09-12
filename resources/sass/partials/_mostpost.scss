@@ -1,0 +1,17 @@
+.most__posts{
+    .toppost{
+        &__content{
+            padding: 3rem !important;
+            & .category{
+                margin-bottom: 1.5rem;
+                display: none;
+            }
+        }
+
+        & .post-meta ul li{
+            &:not(:first-child){
+                display: none;
+            }
+        }
+    }
+}

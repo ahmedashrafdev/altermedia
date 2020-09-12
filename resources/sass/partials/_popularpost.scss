@@ -1,0 +1,36 @@
+.popular__posts{
+    & .post{
+    grid-template-columns: 28.5rem auto !important;
+        & .post-img{
+            max-width: 28.5rem !important;
+            @media (max-width: 768px){
+                margin-left: 0rem;
+                margin-bottom: 3rem;
+                max-width: 100% !important;
+            }
+            
+        }
+
+        & .category{
+            margin-bottom: 3rem;
+        }
+
+        & .post-title{
+            margin-bottom: 1.5rem;
+            & h6{
+                font-size: 2.4rem;
+            }
+        }
+        & .post-meta{
+            margin-bottom: 1.5rem;
+
+        }
+        & .post-description{
+
+            & p{
+                display: block;
+            }
+        }
+
+    }
+}

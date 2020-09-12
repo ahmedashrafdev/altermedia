@@ -1,0 +1,44 @@
+.about{
+
+    &__img{
+        padding: 5rem 0;
+        & img{
+            width: 100%;
+            height:auto;
+        }
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "content content sidebar";
+        grid-gap: 4.5rem;
+        margin-bottom: 5rem;
+
+        @media (max-width: 1024px){
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "content" "sidebar";
+            grid-gap: 3rem;
+        }
+        & .text{
+            grid-area: content;
+            & .title{
+                margin-bottom: 2rem;
+                & h2{
+                    font-size: 3.2rem;
+                    line-height: 1.4;
+                }
+            }
+
+            & .description{
+
+                & p{
+                    font-family: var(--secondary-font);
+                    font-size: 1.8rem;
+                    line-height: 1.7;
+                    color: var(--grey-dark-two);
+                }
+            }
+        }
+    }
+}

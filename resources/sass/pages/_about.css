@@ -1,0 +1,45 @@
+.about__img {
+  padding: 5rem 0;
+}
+
+.about__img img {
+  width: 100%;
+  height: auto;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "content content sidebar";
+  grid-gap: 4.5rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .about__content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "content" "sidebar";
+    grid-gap: 3rem;
+  }
+}
+
+.about__content .text {
+  grid-area: content;
+}
+
+.about__content .text .title {
+  margin-bottom: 2rem;
+}
+
+.about__content .text .title h2 {
+  font-size: 3.2rem;
+  line-height: 1.4;
+}
+
+.about__content .text .description p {
+  font-family: var(--secondary-font);
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: var(--grey-dark-two);
+}

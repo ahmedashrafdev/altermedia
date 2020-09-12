@@ -1,0 +1,49 @@
+.articles{
+    grid-area: articles;
+    & .ad {
+        margin-top: 6rem;
+        width: 100%;
+        & img{
+            max-width: 100%;
+        }
+    }
+
+    & .post {
+        margin-bottom: 3rem;
+        width: 100%;
+        grid-template-columns: 20rem auto !important;
+
+        &-img {
+            max-width: 28rem !important;
+            height: auto;
+        }
+        &-title{
+            margin-top: 2rem;
+        }
+        &-meta{
+            margin-top: 2rem;
+        }
+        &-description{
+            margin-top: 2rem;
+            & p{
+                display: block !important;
+            }
+        }
+    }
+    &-page{
+        padding: 5rem 0;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "articles articles sidebar";
+        grid-gap: 4.5rem;
+
+        @media (max-width: 1024px){
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "articles" "sidebar";
+            grid-gap: 3rem;
+        } 
+    }
+}

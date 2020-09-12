@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Cairo:300,400,600,700,900&display=swap);
+
+*,
+*::after,
+*::before {
+    margin : 0;
+    padding : 0;
+    box-sizing : inherit
+}
+
+*::selection{
+    background-color : rgba(26, 35, 126 , .7);
+    color : #fff;
+}
+html
+{
+    line-height: 1.15;
+    font-size: 62.5% !important;
+    direction: rtl;
+    @media screen AND (max-width : 1200px){
+        font-size: 55%;
+    }
+    @media screen AND (max-width : 940px){
+        font-size: 45%;
+    }
+    @media screen AND (max-width : 778px){
+        font-size: 45%;
+    }
+    @media screen AND (max-width : 490px){
+        font-size: 45%;
+    }
+    @media screen AND (max-width : 300){
+        font-size: 45%;
+    }
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body
+{
+    margin: 0;
+    color: var(--grey-dark-two);
+    font-size : 1.6rem;
+    box-sizing: border-box;
+    font-family: 'cairo', sans-serif;
+    line-height: 1.167;
+    font-weight: 400;
+    word-spacing: 3px;
+    overflow-x: hidden;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section
+{
+    display: block;
+}
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a
+{
+    background-color: transparent;
+    /* 1 */
+}
+a,
+a:visited,
+a:link,
+a:active
+{
+    text-decoration: none !important;
+    
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong
+{
+    font-weight: inherit;
+}
+ul{
+    list-style: none
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong
+{
+    font-weight: bolder;
+}
+
+small
+{
+    font-size: 80%;
+}
+a,div,p,span,li{
+    color : var(--text-color);
+    font-size : var(--font-size);
+
+}
+label{
+    font-size: var(--font-size)
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media only screen and (min-width: 576px) {
+        max-width: 540px;
+    }
+    @media only screen and (min-width: 768px) {
+        max-width: 720px;
+    }
+    @media only screen and (min-width: 992px) {
+        max-width: 960px;
+    }
+    @media only screen and (min-width: 1025px) {
+        max-width: 1260px;
+    }
+    @media only screen and (min-width: 1200px) {
+        max-width: 1260px;
+    }
+    
+}
+
+.elementor-container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media only screen and (min-width: 576px) {
+        max-width: 720px;
+    }
+    @media only screen and (min-width: 768px) {
+        max-width: 720px;
+    }
+    @media only screen and (min-width: 992px) {
+        max-width: 960px;
+    }
+    @media only screen and (min-width: 1025px) {
+        max-width: 1260px;
+    }
+    @media only screen and (min-width: 1200px) {
+        max-width: 1260px;
+    }
+    
+    
+}
+
+.post-meta__list{
+    & .author{
+        &::after{
+            content:"" !important;
+            display: none !important;
+        }
+    }
+}

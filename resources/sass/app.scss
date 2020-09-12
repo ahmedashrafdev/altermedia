@@ -1,0 +1,41 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~flickity/css/flickity.css";
+
+//mine
+
+@import "./base/base";
+@import "./base/animation";
+@import "./base/utilities";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/footer";
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/authors";
+@import "./pages/contact";
+@import "./pages/post";
+@import "./pages/author";
+@import "./partials/mainpost";
+@import "./partials/post";
+@import "./partials/toppost";
+@import "./partials/mainvideo";
+@import "./partials/video";
+@import "./partials/popularpost";
+@import "./partials/mostpost";
+@import "./components/sidebar";
+@import "./pages/posts";
+
+@import "./pages/videos";
+
+
+// fontawesome
+$fa-font-path: "../webfonts";
+

@@ -1,0 +1,151 @@
+.contact{
+
+    &__img{
+        padding: 5rem 0;
+        & img{
+            width: 100%;
+            height:auto;
+        }
+    }
+    
+    &__mid{
+        background-color: #f9f9f9;
+        padding: 5rem 0;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-gap: 5rem;
+        grid-template-areas: "form data";
+        @media (max-width: 1024px){
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "form" "data";
+            grid-gap: 3rem;
+        }
+    }
+    &__form {
+        grid-area: form;
+        background-color: #fff;
+        padding: 5rem;
+        & .title{
+            margin-bottom: 2rem;
+            & h3{
+                color: var(--grey-dark-one);
+                line-height: 1.4;
+                font-weight: 600;
+                font-size: 3.2rem;
+            }
+        }
+        & .input {
+            & input , textarea {
+                margin-bottom: 2rem;
+                line-height: 2rem;
+                display: block;
+                width: 100%;
+                height: auto;
+                border: none;
+                background: 0 0;
+                font-size: 1.6rem;
+                line-height: 3rem;
+                color: var(--grey-dark-one);
+                padding: .9rem 2rem;
+                border-radius: 0;
+                font-family: 'cairo', sans-serif;
+                border: 0.2rem solid var(--grey-light-one);
+                transition: all .5s;
+            }
+
+            & button {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                padding: 1.1rem 3rem;
+                background: var(--primary-color);
+                border: 1px solid transparent;
+                cursor: pointer;
+                border-color: var(--primary-color);
+                color: #fff;
+                font-family: 'cairo', sans-serif !important;
+                font-weight: bold;
+                position: relative;
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        left: auto;
+                        right: 0;
+                    }
+                }
+
+                &::before {
+                    content: " ";
+                    width: 0;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.1);
+
+                    // z-index: -1;
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+    &__data{
+        grid-area: data;
+        position: relative;
+        & .data-wrapper{
+            
+            background-color: #fff;
+            padding: 5rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            @media (max-width: 1024px){
+                margin-top: 10rem;
+                position: relative;
+                top: auto;
+                transform: translateY(0);
+            }
+            & h2{
+                color: var(--grey-dark-one);
+                line-height: 1.4;
+                font-weight: 600;
+                font-size: 2.4rem;
+                margin-bottom: 1rem;
+            }
+            & address{
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                color: var(--grey-dark-three);
+                margin-bottom: 3rem !important;
+                padding-left: 3rem;
+            }
+            & .contacts{
+                & div{
+
+                    & a{
+                        font-size: 1.4rem;
+                        line-height: 2.4rem;
+                        margin-bottom: 1.5rem;
+                        & i{
+                            font-size: 1.2rem;
+                            margin-left: 1%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__bottom{
+        padding: 5rem 0;
+        & .title{
+            margin-bottom: 2rem;
+        }
+        & .map{
+
+        }
+    }
+
+}

@@ -1,0 +1,65 @@
+.post {
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-gap: 3rem;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    &:hover {
+        & img {
+            transform: scale(1.1);
+        }
+
+        & .post-title a {
+            // background-size: 100% 2px;
+       
+        }
+    }
+
+    & .category {
+        margin-bottom: 1.5rem;
+
+        @media (max-width: 768px) {
+            margin-top: 3rem;
+        }
+
+        margin-top: 3px;
+        display: block;
+    }
+
+    & .post-description {
+        & p {
+            display: none;
+        }
+    }
+}
+
+.articles__wrapper, .posts {
+    .articles {
+        .post-img {
+            position: relative;
+
+            //margin-left: 3rem;
+
+            & img {
+                width: 100%;
+                height: auto;
+                margin-left: 0rem !important;
+
+                @media (max-width: 1024px) and (min-width: 768px) {
+                    max-width: 28rem !important;
+                }
+            }
+        }
+    }
+}
+
+.post-img {
+    @media (max-width: 768px) {
+        margin-left: 0rem;
+        margin-bottom: 3rem;
+        max-width: 100% !important;
+    }
+}

@@ -1,0 +1,106 @@
+.info{
+    padding: 6rem 0;
+    background-color: var(--grey-light-three);
+    &__wrapper{
+        position: relative;
+        padding: 3rem;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 991px){
+            flex-direction:column;
+        }
+        
+    }
+}
+.author{
+    &-img{
+        margin-left: 3rem;
+        @media (max-width : 768px){
+            margin-left: 0;
+
+        }
+        & img{
+            max-width: 21rem;
+            width: 100%;
+            height: auto;
+            @media (max-width : 768px){
+                max-width: 100%;
+            }
+        }
+    }
+    &-info{
+        display: flex;
+        @media (max-width : 768px){
+            flex-direction:column;
+        }
+    }
+    &-d{
+
+        & h1{
+            font-size: 2.4rem;
+        }
+        & p{
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+
+        }
+    }
+    &-meta{
+
+        & ul{
+
+            & li{
+
+                & i{
+                    margin-left: 1rem;
+
+                }
+            }
+        }
+    }
+}
+.icons {
+    @media  (max-width : 991px){
+        display:none;
+    }
+    &.mob{
+        display:none;
+        margin-top:2rem;
+        @media (max-width : 991px){
+            display:block;
+        }
+    }
+    @media  (max-width : 400px){
+      margin-top: 2rem;
+    }
+    & ul {
+      display: flex;
+    }
+    & li {
+      &:not(:last-child) {
+        margin-left: 1rem;
+      }
+      & a {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 100%;
+        font-size: 1.2rem;
+        line-height: 3.4rem;
+        text-align: center;
+        background: var(--grey-dark-one);
+        transition:all .3s ease 0s;
+        &:hover {
+          background: var(--primary-color);
+          color: #fff;
+          transform: rotate(45deg);
+        }
+        & i {
+          color: #fff;
+        }
+      }
+    }
+}

@@ -1,0 +1,1 @@
+.video:not(:first-child){display:grid;grid-template-columns:100px auto;grid-gap:3rem}.video:hover img{transform:scale(1.1)}.video .category{margin-bottom:1.5rem;margin-top:3px;display:block}.post-img{position:relative;margin-left:0rem}.post-img img{max-width:100%;height:auto}@media (max-width: 1024px) and (min-width: 768px){.post-img img{max-width:28rem !important}}

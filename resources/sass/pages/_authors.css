@@ -1,0 +1,117 @@
+.authors-page {
+  padding: 5rem 0;
+}
+
+.authors-header {
+  margin: 3rem 0;
+}
+
+.authors__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+.author {
+  position: relative;
+  cursor: pointer;
+}
+
+.author::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(18, 18, 19, 0) 0%, rgba(18, 18, 19, 0.7) 100%);
+}
+
+.author__img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.author-data {
+  position: absolute;
+  z-index: 10;
+  bottom: 2rem;
+  width: 100%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.author-links {
+  z-index: 10;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  overflow: hidden;
+}
+
+.author-links li {
+  transform: translateX(100%);
+  transition: all .5s;
+}
+
+.author-links li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.author-links li a {
+  display: inline-block;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 100%;
+  font-size: 1.2rem;
+  line-height: 3.4rem;
+  text-align: center;
+  background: #fff;
+  transition: all .3s ease 0s;
+}
+
+.author-links li a:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+.author-links li a i {
+  color: var(--grey-dark-one);
+}
+
+.author-name h3 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.author-name h3 a {
+  background: linear-gradient(to left, currentColor 0%, currentColor 100%);
+  position: relative;
+  display: inline;
+  background-position: 100% 95%;
+  background-size: 0px 2px;
+  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  padding: .1% 0;
+  background-repeat: no-repeat;
+}
+
+.author-name h3 a:hover {
+  background-size: 100% 2px;
+}
+
+.author-title {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #eae7e7;
+  margin-top: .5rem;
+}
+
+.author:hover .author-links ul li {
+  transform: translateX(0) !important;
+}
